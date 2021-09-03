@@ -187,12 +187,12 @@ Correr el script de generación de los certificados
 ```
 Esto genera los siguientes archivos:
 
-mqttserver.cer
-mqttserver.jks
-mqttserver.pub.pem
-mqttserver.jks -> certificado usado en el servidor (Thingboard)
+- mqttserver.cer
+- mqttserver.jks
+- mqttserver.pub.pem -> certificado usado en los clientes
+- mqttserver.jks -> certificado usado en el servidor (Thingboard)
 
-mqttserver.pub.pem -> certificado usado en los clientes
+
 
 
 
