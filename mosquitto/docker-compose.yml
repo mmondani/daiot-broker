@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+
+  mosquitto:
+    # service header
+    image:                  eclipse-mosquitto:latest
+    hostname:               mosquitto
+    container_name:         mosquitto
+    
+    # project labels 
+    labels: 
+      project:              "DAIoT" 
+      day:                  "Sep 2021" 
+      mantainer:            "Marcelo Castello"
+      
+    # service specific settings
+    volumes:
+      -                     ./config:/mosquitto/config
+      -                     ./certs:/mosquitto/certs
+    networks:
+      -                     broker-network 
+    expose:
+      -                     "8883"
+    ports:
+      -                     "8883:8883"
+
+networks:
+  broker-network:
+    driver:                 bridge
